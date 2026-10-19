@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111327">
+  <title>Noomi — скачать приложение</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:radial-gradient(ellipse at top,#30265f 0,#15162c 48%,#0c0e1b 100%);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#fff}.card{width:min(100%,440px);padding:34px 26px;text-align:center;border:1px solid #ffffff20;border-radius:28px;background:#ffffff0d;box-shadow:0 24px 80px #0006}.logo{width:88px;height:88px;display:grid;place-items:center;margin:0 auto 18px;border-radius:25px;background:linear-gradient(135deg,#b3a2ff,#6955ef);font-size:43px;font-weight:800;box-shadow:0 10px 35px #7763ff50}h1{margin:0;font-size:34px;letter-spacing:.2px}.sub{color:#c9c7df;line-height:1.65;margin:12px 0 24px}.download{display:block;padding:16px 20px;border-radius:15px;background:#8b78ff;color:#fff;text-decoration:none;font-weight:750;font-size:17px;transition:transform .15s,background .15s}.download:hover{background:#7561f4;transform:translateY(-2px)}.hint{font-size:13px;color:#aaa8c5;margin:16px 0 0}.footer{margin-top:28px;color:#85839f;font-size:12px}
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="logo" aria-hidden="true">N</div>
+    <h1>Noomi</h1>
+    <p class="sub">Скачай приложение Noomi для Android.<br>Нажми на кнопку ниже, чтобы получить APK-файл.</p>
+    <!-- После загрузки APK в GitHub Releases замени # на прямую ссылку на app.apk -->
+    <a class="download" href="#" id="downloadButton">↓ Скачать APK</a>
+    <p class="hint">Android · APK-файл</p>
+    <div class="footer">Публикуй и устанавливай приложение на свой страх и риск.</div>
+  </main>
+  <script>
+    // Вставь прямую ссылку на APK вместо DOWNLOAD_URL ниже.
+    const DOWNLOAD_URL = "PASTE_DIRECT_APK_LINK_HERE";
+    const button = document.getElementById("downloadButton");
+    if (DOWNLOAD_URL.startsWith("https://")) {
+      button.href = DOWNLOAD_URL;
+      button.target = "_blank";
+      button.rel = "noopener";
+    } else {
+      button.addEventListener("click", function (event) {
+        event.preventDefault();
+        alert("Ссылка на APK ещё не добавлена. Загрузи APK в GitHub Releases и вставь прямую ссылку в index.html.");
+      });
+    }
+  </script>
+</body>
+</html>
