@@ -3,36 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111327">
-  <title>Noomi — скачать приложение</title>
+  <meta name="theme-color" content="#10111d">
+  <meta name="description" content="Официальная страница загрузки Noomi для Android.">
+  <title>Noomi — приложение для Android</title>
   <style>
-    *{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:radial-gradient(ellipse at top,#30265f 0,#15162c 48%,#0c0e1b 100%);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#fff}.card{width:min(100%,440px);padding:34px 26px;text-align:center;border:1px solid #ffffff20;border-radius:28px;background:#ffffff0d;box-shadow:0 24px 80px #0006}.logo{width:88px;height:88px;display:grid;place-items:center;margin:0 auto 18px;border-radius:25px;background:linear-gradient(135deg,#b3a2ff,#6955ef);font-size:43px;font-weight:800;box-shadow:0 10px 35px #7763ff50}h1{margin:0;font-size:34px;letter-spacing:.2px}.sub{color:#c9c7df;line-height:1.65;margin:12px 0 24px}.download{display:block;padding:16px 20px;border-radius:15px;background:#8b78ff;color:#fff;text-decoration:none;font-weight:750;font-size:17px;transition:transform .15s,background .15s}.download:hover{background:#7561f4;transform:translateY(-2px)}.hint{font-size:13px;color:#aaa8c5;margin:16px 0 0}.footer{margin-top:28px;color:#85839f;font-size:12px}
+    :root{color-scheme:dark;--bg:#0d0e17;--panel:#151725;--muted:#a8abc1;--purple:#9b8cff;--purple2:#7563f3;--line:#ffffff17}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100svh;background:radial-gradient(ellipse at 50% -10%,#3a2d72 0,transparent 42%),linear-gradient(180deg,#11121f,#0b0c13 72%);color:#f8f7ff;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;display:flex;flex-direction:column}
+    .top{width:min(100% - 36px,960px);margin:0 auto;padding:25px 0;display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.3px}
+    .mini-logo{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(140deg,#c2b8ff,#7763f7);color:#17132c;font-size:19px;box-shadow:0 6px 22px #8b79ff3b}
+    main{width:min(100% - 36px,680px);margin:auto;display:flex;align-items:center;justify-content:center;flex:1;padding:35px 0 60px}
+    .card{width:100%;position:relative;overflow:hidden;text-align:center;padding:clamp(28px,7vw,58px) clamp(22px,6vw,52px);border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,#ffffff0d,#ffffff05);box-shadow:0 30px 100px #0006}
+    .orb{position:absolute;width:220px;height:220px;border-radius:50%;filter:blur(70px);opacity:.18;background:#8b78ff;left:calc(50% - 110px);top:-140px;pointer-events:none}
+    .logo{position:relative;width:92px;height:92px;margin:0 auto 24px;border-radius:27px;display:grid;place-items:center;background:linear-gradient(145deg,#c5baff,#7964f5 75%);color:#19142e;font-size:49px;font-weight:900;box-shadow:0 14px 40px #8270ff42}
+    .eyebrow{color:#c4bbff;font-size:12px;font-weight:800;letter-spacing:2.6px;text-transform:uppercase}
+    h1{font-size:clamp(40px,9vw,60px);letter-spacing:-2px;line-height:1;margin:12px 0 16px}
+    .desc{max-width:440px;margin:0 auto;color:var(--muted);font-size:16px;line-height:1.75}
+    .button{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:360px;min-height:58px;margin:30px auto 0;padding:16px 22px;border-radius:17px;background:linear-gradient(135deg,#a99aff,#7966f4);color:#141126;text-decoration:none;font-size:16px;font-weight:850;box-shadow:0 12px 35px #8270ff35;transition:transform .18s,filter .18s}
+    .button:hover{transform:translateY(-2px);filter:brightness(1.07)}.button:focus-visible{outline:3px solid white;outline-offset:4px}
+    .meta{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:18px}.pill{border:1px solid var(--line);border-radius:999px;padding:7px 11px;color:#c7c7d9;font-size:12px}
+    .notice{max-width:440px;margin:24px auto 0;padding:13px 15px;border-radius:14px;background:#ffffff08;border:1px solid var(--line);color:#bfc0d2;font-size:12px;line-height:1.6}
+    .notice strong{color:#f0edff}.foot{padding:20px;text-align:center;color:#77798f;font-size:12px}
+    @media(prefers-reduced-motion:reduce){.button{transition:none}}
   </style>
 </head>
 <body>
-  <main class="card">
-    <div class="logo" aria-hidden="true">N</div>
-    <h1>Noomi</h1>
-    <p class="sub">Скачай приложение Noomi для Android.<br>Нажми на кнопку ниже, чтобы получить APK-файл.</p>
-    <!-- После загрузки APK в GitHub Releases замени # на прямую ссылку на app.apk -->
-    <a class="download" href="#" id="downloadButton">↓ Скачать APK</a>
-    <p class="hint">Android · APK-файл</p>
-    <div class="footer">Публикуй и устанавливай приложение на свой страх и риск.</div>
+  <header class="top"><span class="mini-logo" aria-hidden="true">N</span><span>NOOMI</span></header>
+  <main>
+    <section class="card" aria-labelledby="title">
+      <div class="orb" aria-hidden="true"></div>
+      <div class="logo" aria-hidden="true">N</div>
+      <div class="eyebrow">Приложение для Android</div>
+      <h1 id="title">Noomi</h1>
+      <p class="desc">Добро пожаловать на страницу Noomi. Здесь можно открыть страницу релиза и проверить доступные файлы приложения.</p>
+      <a class="button" href="https://github.com/nookmix/noomi-sit/releases" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">↓</span> Открыть загрузки</a>
+      <div class="meta"><span class="pill">Android</span><span class="pill">GitHub Releases</span></div>
+      <p class="notice"><strong>Важно:</strong> кнопка ведёт на страницу релизов GitHub. Для прямого скачивания в релиз нужно прикрепить настоящий APK-файл — архивы «Source code» не являются установщиком приложения.</p>
+    </section>
   </main>
-  <script>
-    // Вставь прямую ссылку на APK вместо DOWNLOAD_URL ниже.
-    const DOWNLOAD_URL = "PASTE_DIRECT_APK_LINK_HERE";
-    const button = document.getElementById("downloadButton");
-    if (DOWNLOAD_URL.startsWith("https://")) {
-      button.href = DOWNLOAD_URL;
-      button.target = "_blank";
-      button.rel = "noopener";
-    } else {
-      button.addEventListener("click", function (event) {
-        event.preventDefault();
-        alert("Ссылка на APK ещё не добавлена. Загрузи APK в GitHub Releases и вставь прямую ссылку в index.html.");
-      });
-    }
-  </script>
+  <footer class="foot">NOOMI · Страница загрузки</footer>
 </body>
 </html>
+
